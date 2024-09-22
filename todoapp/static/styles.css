@@ -1,7 +1,7 @@
 /* Base styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e2cb8d;
+    /* background-color: #e2cb8d; */
     color: #333;
     margin: 0;
     padding: 0;
@@ -120,40 +120,57 @@ span .btn{
     font-size: larger;
     font-weight: 500;
     margin: 1.2rem;
+    border: none;
 }
 span .btn:hover{
     background-color: #4A4947;
-    color: #B17457;
+    color: #FAF7F0;
     text-decoration: none;
+    border: none;
+}
+
+/*signup form*/
+.signup_form{
+    position: relative;
+    margin: 1rem 1.5rem;
+}
+.signup_form label{
+    color: #B17457;
+    margin: 0.6rem 0.2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+.signup_form input{
+    border: 2px solid #4A4947;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+}
+.signup_form input:hover, .signup_form input:active{
+    border: 2px solid #B17457;
+}
+.signup_form .helptext{
+    height: 0;
+    width: 0;
+    font-size: 0;
+
+}
+.signup_form .btn{
+    background-color: #D8D2C2;
+    color: #B17457;
+    font-size: larger;
+    font-weight: 500;
+    margin: 1.2rem 0;
+    border: none;
+}
+.signup_form .btn:hover{
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-decoration: none;
+    border: none;
 }
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav span {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    }
-
-    .nav li {
-        margin: 10px 0;
-    }
-
-    .nav form {
-        margin-left: 0;
-    }
-
-    .nav input[type="submit"] {
-        width: 100%;
-    }
-}
 
 /* Task List */
 .task-list ul {
@@ -280,4 +297,43 @@ a:hover {
 
 .button:hover {
     background-color: #8a2be2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav span {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .nav form {
+        margin-left: 0;
+    }
+
+    .nav input[type="submit"] {
+        width: 100%;
+    }
 }
