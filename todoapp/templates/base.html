@@ -22,22 +22,22 @@
         {% if user.is_authenticated %}
 
         <div>
-        <h2>DASHBOARD</h2>
-        <strong class="usern">{{ user.username }}</strong>
-        <li>
-        <form action="{%url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit"><strong class="logout">LOGOUT</strong></button>
-        </form>
-        </li>
+            <h2>DASHBOARD</h2>
+            <strong class="usern">:{{ user.username }}</strong>
+            <li>
+            <form action="{%url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit"><strong class="logout">Sign-out</strong></button>
+            </form>
+            </li>
 
-        {% else %}
-        <li>
-            <a href="{% url 'login' %}">Log in</a>
-        </li>
-        <li>
-            <a href="{% url 'signup' %}">Signup</a>
-        </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login' %}">Log in</a>
+            </li>
+            <li>
+                <a href="{% url 'signup' %}">Signup</a>
+            </li>
         </div>
         {% endif %}
 

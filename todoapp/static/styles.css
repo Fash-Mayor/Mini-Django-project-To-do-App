@@ -1,7 +1,6 @@
 /* Base styles */
 body {
     font-family: 'Arial', sans-serif;
-    /* background-color: #e2cb8d; */
     color: #333;
     margin: 0;
     padding: 0;
@@ -37,17 +36,14 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     list-style: none;
 }
-
 .nav span {
     display: flex;
     align-items: center;
 }
-
 .nav li {
     list-style: none;
     margin: 0 15px;
 }
-
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -55,19 +51,37 @@ h1, h2 {
     font-size: 1.1em;
     transition: color 0.2s;
 }
-
 .nav a:hover {
     color: #4A4947;
     text-decoration: none;
 }
-
+.nav div{
+    width: 10%;
+    margin-right: 24rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav button{
+    width: 9rem;
+    background-color: #fff;
+    color: #B17457;
+    font-size: 16px;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+.nav button:hover{
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-decoration: none;
+    border: none;
+}
 .nav form {
     margin-left: 15px;
 }
-
 .nav input[type="submit"] {
-    background-color: #6a0dad;
-    color: #fff;
+    color: #D8D2C2;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -75,17 +89,11 @@ h1, h2 {
     font-weight: bold;
     transition: background-color 0.2s;
 }
-
-.nav input[type="submit"]:hover {
-    background-color: #8a2be2;
-}
-
 .nav li {
     color: #d1b3ff;
     font-size: 1.1em;
     font-weight: bold;
 }
-
 .nav form li {
     margin-left: 0;
 }
@@ -112,14 +120,28 @@ h1, h2 {
 .login_form input:hover, .login_form input:active{
     border: 2px solid #B17457;
 }
-
-/*span links*/
-span .btn{
+.login_form .btn{
     background-color: #D8D2C2;
     color: #B17457;
     font-size: larger;
     font-weight: 500;
     margin: 1.2rem;
+    border: none;
+}
+.login_form .btn:hover{
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-decoration: none;
+    border: none;
+}
+
+/*span link*/
+span .btn{
+    background-color: #D8D2C2;
+    color: #B17457;
+    font-size: larger;
+    font-weight: 500;
+    margin: 0 1.2rem;
     border: none;
 }
 span .btn:hover{
@@ -169,15 +191,22 @@ span .btn:hover{
     border: none;
 }
 
-
-
-
 /* Task List */
+.task-list a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1.5rem;
+}
+
+.task-list a:hover {
+    color: #9b30ff;
+    text-decoration: underline;
+}
 .task-list ul {
     list-style-type: none;
     padding: 0;
 }
-
 .task-list li {
     background-color: #e6e1f0;
     margin: 10px 0;
@@ -186,22 +215,66 @@ span .btn:hover{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .task-list li:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Links */
-a {
-    color: #6a0dad;
-    text-decoration: none;
-    font-weight: bold;
+.task-list li a{
+    margin: 1.5rem 0;
+    padding-left: 0.7rem;
+}
+.task-list li p{
+    margin-bottom: 0.9rem;
 }
 
-a:hover {
-    color: #9b30ff;
-    text-decoration: underline;
+/*Create task*/
+h1{
+    margin-left: 50px;
+}
+.create_task{
+    position: relative;
+    margin: 1.2rem;
+    margin-left: 46px;
+    width: 90%;
+}
+.create_task label{
+    color: #B17457;
+    margin: 1rem 0.5rem;
+    font-size: 20px;
+    font-weight: 500;
+    /* display: flex; */
+}
+.create_task input, .create_task textarea, .create_task select{
+    border: 2px solid #4A4947;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    margin: 0.3rem 0 0.3rem 10px;
+    display: flex;
+}
+.create_task input:hover{
+    border: 2px solid #B17457;
+}
+.create_task  input[type="checkbox"]{
+    display: inline;
+    margin: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.create_task .btn{
+    background-color: #D8D2C2;
+    color: #B17457;
+    font-size: larger;
+    font-weight: 500;
+    margin: 1.2rem 7px;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.create_task .btn:hover{
+    background-color: #4A4947;
+    color: #FAF7F0;
+    text-decoration: none;
+    border: none;
 }
 
 /* Task Status */
